@@ -17,7 +17,7 @@ Installing R-build as an Renv plugin will give you access to the
 
     $ mkdir -p ~/.Renv/plugins
     $ cd ~/.Renv/plugins
-    $ git clone git://github.com/viking/R-build.git
+    $ git clone git://github.com/tonytan4ever/R-build.git
 
 This will install the latest development version of R-build into
 the `~/.Renv/plugins/R-build` directory. From that directory, you
@@ -31,7 +31,7 @@ the `R-build` command for precise control over R version
 installation. If you have Renv installed, you will also be able to
 use the `Renv install` command.
 
-    $ git clone git://github.com/viking/R-build.git
+    $ git clone git://github.com/tonytan4ever/R-build.git
     $ cd R-build
     $ ./install.sh
 
