@@ -252,7 +252,9 @@ require_gcc() {
     return 1
   fi
 
-  export CC="$gcc"
+  if [[ -z "${CC}" ]]; then
+    export CC="$gcc"
+  fi
 }
 
 require_rsync() {
@@ -475,8 +477,6 @@ if [ -n "$DEBUG" ]; then
   export FCFLAGS="-g3 -Wall"
   export CXXFLAGS="-g3 -Wall"
 fi
-export LDFLAGS="-L'${PREFIX_PATH}/lib' ${LDFLAGS}"
-export CPPFLAGS="-I'${PREFIX_PATH}/include' ${CPPFLAGS}"
 CONFIGURE_ARGS="--enable-R-shlib ${CONFIGURE_ARGS}"
 
 trap build_failed ERR
